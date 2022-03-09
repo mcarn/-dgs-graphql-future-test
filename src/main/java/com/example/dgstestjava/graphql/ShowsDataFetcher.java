@@ -22,7 +22,6 @@ public class ShowsDataFetcher {
   public CompletableFuture<List<Show>> shows(@InputArgument String titleFilter) {
     if (titleFilter == null) {
       return CompletableFuture.supplyAsync(() -> shows);
-
     }
 
     return CompletableFuture.supplyAsync(() -> shows.stream()
